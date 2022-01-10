@@ -87,7 +87,11 @@
             {% for post in fresh_posts %}
               <div class="single-recent-blog-post">
                 <div class="thumb">
-                  <img class="img-fluid" src="{{ post.image_url }}" alt="">
+                  {% if post.image_url %}
+                    <img class="img-fluid" src="{{ post.image_url }}" alt="">
+                  {% else %}
+                    <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+                  {% endif %}
                   <ul class="thumb-info">
                     <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
                     <li><a href="#"><i class="ti-notepad"></i>{{ post.published_at }}</a></li>
