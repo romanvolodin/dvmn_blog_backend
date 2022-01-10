@@ -7,7 +7,7 @@ Home
 
 {% block 'content' %}
   <main class="site-main">
-    <!--================Hero Banner start =================-->  
+    <!--================Hero Banner start =================-->
     <section class="mb-30px">
       <div class="container">
         <div class="hero-banner">
@@ -19,7 +19,7 @@ Home
         </div>
       </div>
     </section>
-    <!--================Hero Banner end =================-->  
+    <!--================Hero Banner end =================-->
 
     <!--================ Blog slider start =================-->
     <section>
@@ -30,9 +30,9 @@ Home
               <div class="card blog__slide text-center">
                 <div class="blog__slide__img">
                   {% if post.image_url %}
-                    <img class="card-img rounded-0" src="{{ post.image_url }}" alt="">
+                    <img class="card-img rounded-0" src="{{ post.image_url }}" alt="post image preview">
                   {% else %}
-                    <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}" alt="">
+                    <img class="card-img rounded-0" src="{% static 'img/banner/blog.png' %}" alt="post image preview">
                   {% endif %}
                 </div>
                 <div class="blog__slide__content">
@@ -56,9 +56,9 @@ Home
               <div class="single-recent-blog-post">
                 <div class="thumb">
                   {% if post.image_url %}
-                    <img class="img-fluid" src="{{ post.image_url }}" alt="">
+                    <img class="img-fluid" src="{{ post.image_url }}" alt="post image">
                   {% else %}
-                    <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="post image">
                   {% endif %}
                   <ul class="thumb-info" style="max-width: 550px;">
                     <li><a href="#"><i class="ti-user"></i>{{ post.author }}</a></li>
